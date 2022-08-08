@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "ListInFeedBug.Windows": {
+      "commandName": "MsixPackage"
+    }
+  }
+}

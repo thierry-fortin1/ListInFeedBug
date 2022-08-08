@@ -1,0 +1,32 @@
+﻿<Page x:Class="ListInFeedBug.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:local="using:ListInFeedBug"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      xmlns:uer="using:Uno.Extensions.Reactive.UI"
+      Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Page.Resources>
+        <DataTemplate x:Key="ListViewTemplate">
+            <TextBlock Text="{Binding Content}" />
+        </DataTemplate>
+    </Page.Resources>
+    
+    <Grid>
+        <uer:FeedView Source="{Binding Items}">
+            <DataTemplate>
+                <ListView ItemsSource="{Binding Data}" />
+            </DataTemplate>
+        </uer:FeedView>
+        
+        <TextBlock Text="{Binding Title}" />
+        <uer:FeedView Source="{Binding Messages}">
+            <DataTemplate>
+                <ListView ItemsSource="{Binding Data}"
+                          ItemTemplate="{StaticResource ListViewTemplate}"/>
+            </DataTemplate>
+        </uer:FeedView>
+    </Grid>
+</Page>
