@@ -8,25 +8,9 @@
       xmlns:uer="using:Uno.Extensions.Reactive.UI"
       Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Page.Resources>
-        <DataTemplate x:Key="ListViewTemplate">
-            <TextBlock Text="{Binding Content}" />
+    <uer:FeedView Source="{Binding Messages}">
+        <DataTemplate>
+            <ListView ItemsSource="{Binding Data}" />
         </DataTemplate>
-    </Page.Resources>
-    
-    <Grid>
-        <uer:FeedView Source="{Binding Items}">
-            <DataTemplate>
-                <ListView ItemsSource="{Binding Data}" />
-            </DataTemplate>
-        </uer:FeedView>
-        
-        <TextBlock Text="{Binding Title}" />
-        <uer:FeedView Source="{Binding Messages}">
-            <DataTemplate>
-                <ListView ItemsSource="{Binding Data}"
-                          ItemTemplate="{StaticResource ListViewTemplate}"/>
-            </DataTemplate>
-        </uer:FeedView>
-    </Grid>
+    </uer:FeedView>
 </Page>

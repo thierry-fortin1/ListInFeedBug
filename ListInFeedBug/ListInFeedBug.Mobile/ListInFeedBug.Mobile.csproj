@@ -18,8 +18,9 @@
     <SupportedOSPlatformVersion Condition="'$(TargetFramework)'=='net6.0-macos'">10.14</SupportedOSPlatformVersion>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="Uno.Extensions.Reactive" Version="2.0.0" />
-    <PackageReference Include="Uno.Extensions.Reactive.WinUI" Version="2.0.0" />
+    <PackageReference Include="Uno.Extensions.Core" Version="2.2.0-dev.81" />
+    <PackageReference Include="Uno.Extensions.Reactive" Version="2.2.0-dev.81" />
+    <PackageReference Include="Uno.Extensions.Reactive.WinUI" Version="2.2.0-dev.81" />
     <PackageReference Include="Uno.WinUI" Version="4.4.13" />
     <PackageReference Include="Uno.WinUI.RemoteControl" Version="4.4.13" Condition="'$(Configuration)'=='Debug'" />
     <PackageReference Include="Uno.UI.Adapter.Microsoft.Extensions.Logging" Version="4.4.13" />

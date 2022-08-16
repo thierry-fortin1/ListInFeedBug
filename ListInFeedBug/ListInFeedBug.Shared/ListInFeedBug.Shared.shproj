@@ -14,7 +14,9 @@
     <UpToDateCheckInput Remove="FeedView.xaml" />
   </ItemGroup>
   <ItemGroup>
+    <_Globbed_Compile Remove="Class1.cs" />
     <_Globbed_Compile Remove="Item.cs" />
+    <_Globbed_Compile Remove="ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <_Globbled_Page Remove="FeedView.xaml" />
